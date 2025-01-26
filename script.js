@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
    const username = document.getElementById("username").value.trim();
    const email = document.getElementById("email").value.trim();
-   const passsword = document.getElementById("password").value.trim();
+   const password = document.getElementById("password").value.trim();
 
 
     //Validation logic
@@ -38,14 +38,14 @@ document.addEventListener("DOMContentLoaded", function (){
       };
     
     //Email Validation
-      if (email.includes("@", ".") === false){
+      if (email.includes("@", ".") == false){
         isValid = false;
         messages.push("Please enter a valid email address") ;
 
       };
 
     //Password Validation
-    if (passsword.length < 8 ){
+    if (password.length < 8 ){
       isValid = false;
       messages.push("Password should be 8 characters long") ;
 
