@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function (){
     const feedbackDiv = document.getElementById("form-feedback");
 
     //form event listener
-    form.addEventListener("submit", function(Event){
+    form.addEventListener("submit", function(){
 
       Event.preventDefault();
 
@@ -33,21 +33,21 @@ document.addEventListener("DOMContentLoaded", function (){
       if (username.length < 3){
 
         isValid = false;
-        messages += "Username should have a minimum of 3 characters";
+        messages.push( "Username should have a minimum of 3 characters");
 
       };
     
     //Email Validation
       if (email.includes("@", ".") === false){
         isValid = false;
-        messages += "Please enter a valid email address";
+        messages.push("Please enter a valid email address") ;
 
       };
 
     //Password Validation
     if (passsword.length < 8 ){
       isValid = false;
-      messages += "Password should be 8 characters long";
+      messages.push("Password should be 8 characters long") ;
 
     };    
 
